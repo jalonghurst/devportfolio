@@ -17,7 +17,7 @@ const themeDark = {
     body: white
 };
 
-const Theme = mode > (mode === "dark" ? themeDark : themeLight);
+const theme = mode > (mode === "dark" ? themeDark : themeLight);
 
 
-export default Theme;
+export default theme;

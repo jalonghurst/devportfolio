@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
-import Theme from "./Theme/Theme";
+import theme from "./theme";
 
 const defaultContextData = {
     dark: false,
@@ -34,7 +34,7 @@ const ThemeProvider = ({ children }) => {
 
     };
 
-    const computedTheme = themeState.dark ? themeState("dark") : themeState("light");
+    const computedTheme = themeState.dark ? theme("dark") : theme("light");
 
     return (
         <EmotionThemeProvider theme={computedTheme}>
@@ -53,4 +53,4 @@ const ThemeProvider = ({ children }) => {
 
 
 
-export { ThemeProvider, useTheme}
+export { ThemeProvider, useTheme };
